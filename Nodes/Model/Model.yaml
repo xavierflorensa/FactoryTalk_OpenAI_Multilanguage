@@ -1,0 +1,15 @@
+Name: Model
+Type: ModelCategoryFolder
+Children:
+- Name: Prompt
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+- Name: ResponseString
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
+- Name: Language
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "0"
