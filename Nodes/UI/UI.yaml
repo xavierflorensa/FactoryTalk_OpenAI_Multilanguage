@@ -345,7 +345,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 910.0
+      Value: 970.0
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size
@@ -419,7 +419,7 @@ Children:
       Type: BaseDataVariableType
       DataType: LocalizedText
       ModellingRule: Optional
-      Value: {"LocaleId":"en-US","Text":"Traslate"}
+      Value: {"LocaleId":"en-US","Text":"Translate"}
     - Name: LeftMargin
       Type: BaseVariableType
       DataType: Size

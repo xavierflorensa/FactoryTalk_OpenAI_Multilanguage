@@ -32,8 +32,8 @@ public class RuntimeNetLogic1 : BaseNetLogic
 
     public void Translate()
     {
-        var myTextbox = Project.Current.Get<TextBox>("UI/MainWindow/TextBox2");
-        Log.Info(myTextbox.Text+"Hello World, a button has been pressed");
+        //var myTextbox = Project.Current.Get<TextBox>("UI/MainWindow/TextBox2");
+        //Log.Info(myTextbox.Text+"Hello World, a button has been pressed");
         var language = Project.Current.GetVariable("Model/Language");
         var prompt = Project.Current.GetVariable("Model/Prompt");
         //prompt.Value = "Hello World!";
