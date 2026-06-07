@@ -32,13 +32,12 @@ public class RuntimeNetLogic1 : BaseNetLogic
 
     public void Translate()
     {
-        //var myTextbox = Project.Current.Get<TextBox>("UI/MainWindow/TextBox2");
-        //Log.Info(myTextbox.Text+"Hello World, a button has been pressed");
         var language = Project.Current.GetVariable("Model/Language");
         var prompt = Project.Current.GetVariable("Model/Prompt");
-        //prompt.Value = "Hello World!";
-        prompt.Value = "Translate the following English text to "+language.Value+": 'Hello, how are you?'";
+        var textToTranslate = Project.Current.GetVariable("Model/TextToTranslate");
+        prompt.Value = "Translate the following English text to "+language.Value+": "+textToTranslate.Value;
         var responseVar = Project.Current.GetVariable("Model/ResponseString");
+        
         var apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY"); // read from Windows env vars
             if (string.IsNullOrEmpty(apiKey))
             {
@@ -56,7 +55,7 @@ public class RuntimeNetLogic1 : BaseNetLogic
             messages = new[]
             {
                 //new { role = "user", content = "Translate the following English text to French: 'Hello, how are you?'" }
-                new { role = "user", content = "Translate the following English text to "+language.Value+": 'Hello, how are you?'" }
+                new { role = "user", content = "Translate the following English text to "+language.Value+": "+textToTranslate.Value }
             },
             max_tokens = 60
         };
